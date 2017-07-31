@@ -2,17 +2,25 @@
 
 // La pagina de opsiones
 function ptr_analytics_options_page() {
-
-    // Salvo el código de seguimiento
-    if ( isset( $_POST['ptr_analytics_code'] ) ) :
-        # Guardo el ID de la imagen en wp_options
-        update_option('ptr_analytics_code', stripslashes($_POST['ptr_analytics_code']));        
-    endif;
+   
+    if ( isset( $_POST['ptr_analytics_code'] ) ) {
+        $nonce = $_POST['psa_nonce'];
         
+        printf("<script>console.log('%s')</script>", wp_verify_nonce($nonce, 'save_psa'));
+        
+        if ( ! wp_verify_nonce($nonce, 'save_psa') ) {
+            die( 'Security check' );
+        } else {
+            # Guardo el código de seguimiento
+            update_option('ptr_analytics_code', stripslashes($_POST['ptr_analytics_code']));
+        }
+    }
+            
     ?>
     <div class="wrap">
         <h1>Simple Analytics (by <a href="https://promotore.com.ar">Promotore</a>)</h1>
             <form method='post'>
+            	<?php wp_nonce_field('save_psa','psa_nonce'); ?>
                 <table class="form-table">
                     <tbody>
                         <tr>
