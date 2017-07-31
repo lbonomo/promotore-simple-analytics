@@ -1,13 +1,7 @@
 #!/bin/bash
 
-if [ $# -eq 0 ]; then
-	echo 'Usage: `./deploy-to-svn.sh <tag | HEAD>`'
-	exit 1
-fi
-
 GIT_DIR=$(dirname "$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )" )
-SVN_DIR="/tmp/jetpack"
-TARGET=$1
+SVN_DIR="/tmp/psa"
 
 cd $GIT_DIR
 
@@ -18,29 +12,13 @@ if [[ -n $( git status -s --porcelain ) ]]; then
 	exit 1
 fi
 
-if [ "$1" != "HEAD" ]; then
-
-	# Make sure we're trying to deploy something that's been tagged. Don't deploy non-tagged.
-	if [ -z $( git tag | grep "^$TARGET$" ) ]; then
-		echo "Tag $TARGET not found in git repository."
-		echo "Please try again with a valid tag."
-		exit 1
-	fi
-else
-	read -p "You are about to deploy a change from an unstable state 'HEAD'. This should only be done to update string typos for translators. Are you sure? [y/N]" -n 1 -r
-	if [[ $REPLY != "y" && $REPLY != "Y" ]]
-	then
-		exit 1
-	fi
-fi
-
-git checkout $TARGET
+git checkout master
 
 # Prep a home to drop our new files in. Just make it in /tmp so we can start fresh each time.
 rm -rf $SVN_DIR
 
 echo "Checking out SVN shallowly to $SVN_DIR"
-svn -q checkout http://plugins.svn.wordpress.org/jetpack/ --depth=empty $SVN_DIR
+svn -q checkout https://plugins.svn.wordpress.org/promotore-simple-analytics/ --depth=empty $SVN_DIR
 echo "Done!"
 
 cd $SVN_DIR
@@ -73,14 +51,3 @@ for file in $( cat "$GIT_DIR/.svnignore" 2>/dev/null ); do
 	rm -rf $SVN_DIR/trunk/$file
 done
 echo "Done!"
-
-# Tag the release.
-# svn cp trunk tags/$TARGET
-
-# Change stable tag in the tag itself, and commit (tags shouldn't be modified after comitted)
-# perl -pi -e "s/Stable tag: .*/Stable tag: $TARGET/" tags/$TARGET/readme.txt
-# svn ci
-
-# Update trunk to point to the freshly tagged and shipped release.
-# perl -pi -e "s/Stable tag: .*/Stable tag: $TARGET/" trunk/readme.txt
-# svn ci
