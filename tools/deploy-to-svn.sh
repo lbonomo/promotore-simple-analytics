@@ -29,7 +29,7 @@ echo "Done!"
 
 echo "Deleting everything in trunk except for .svn directories"
 for file in $(find $SVN_DIR/trunk/* -not -path "*.svn*"); do
-	rm $file 2>/dev/null
+	rm -v $file
 done
 echo "Done!"
 
@@ -37,8 +37,8 @@ echo "Rsync'ing everything over from Git except for .git stuffs"
 rsync -r --exclude='*.git*' $GIT_DIR/* $SVN_DIR/trunk
 echo "Done!"
 
-echo "Purging paths included in .svnignore"
-# check .svnignore
+echo "Purging paths included in .gitignore"
+# check .gitignore
 for file in $( cat "$GIT_DIR/.gitignore" 2>/dev/null ); do
 	rm -rf $SVN_DIR/trunk/$file
 done
