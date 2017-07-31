@@ -27,10 +27,6 @@ echo "Checking out SVN trunk to $SVN_DIR/trunk"
 svn -q up trunk
 echo "Done!"
 
-echo "Checking out SVN tags shallowly to $SVN_DIR/tags"
-svn -q up tags --depth=empty
-echo "Done!"
-
 echo "Deleting everything in trunk except for .svn directories"
 for file in $(find $SVN_DIR/trunk/* -not -path "*.svn*"); do
 	rm $file 2>/dev/null
@@ -47,7 +43,7 @@ echo "Done!"
 
 echo "Purging paths included in .svnignore"
 # check .svnignore
-for file in $( cat "$GIT_DIR/.svnignore" 2>/dev/null ); do
+for file in $( cat "$GIT_DIR/.gitignore" 2>/dev/null ); do
 	rm -rf $SVN_DIR/trunk/$file
 done
 echo "Done!"
