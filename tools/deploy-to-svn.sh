@@ -37,10 +37,6 @@ echo "Rsync'ing everything over from Git except for .git stuffs"
 rsync -r --exclude='*.git*' $GIT_DIR/* $SVN_DIR/trunk
 echo "Done!"
 
-echo "Purging .po files"
-rm -f $SVN_DIR/trunk/languages/*.po
-echo "Done!"
-
 echo "Purging paths included in .svnignore"
 # check .svnignore
 for file in $( cat "$GIT_DIR/.gitignore" 2>/dev/null ); do
