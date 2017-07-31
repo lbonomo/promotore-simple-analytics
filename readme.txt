@@ -16,6 +16,10 @@ A simple Google Analytics plugin for WordPress. If you like more options install
 
 == Changelog ==
 
+= 0.0.2 =
+*Release Date - 31 Julio, 2017*
+- Implementación de NONCE en el formulario
+
 = 0.0.1 =
 *Release Date - 13 Mayo, 2017*
 - Initial commit
