@@ -4,3 +4,9 @@ nbproject/
 *~
 uploat-gthub.sh
 *.swp
+.buildpath
+.project
+.settings/
+build/
+phpunit.xml.dist
+tests/
