@@ -15,7 +15,7 @@ fi
 git checkout master
 
 # Prep a home to drop our new files in. Just make it in /tmp so we can start fresh each time.
-rm -rf $SVN_DIR
+rm -rfv $SVN_DIR
 
 echo "Checking out SVN shallowly to $SVN_DIR"
 svn -q checkout https://plugins.svn.wordpress.org/promotore-simple-analytics/ --depth=empty $SVN_DIR
@@ -29,7 +29,7 @@ echo "Done!"
 
 echo "Deleting everything in trunk except for .svn directories"
 for file in $(find $SVN_DIR/trunk/* -not -path "*.svn*"); do
-	rm -v $file
+	rm -vr $file
 done
 echo "Done!"
 
@@ -40,6 +40,9 @@ echo "Done!"
 echo "Purging paths included in .gitignore"
 # check .gitignore
 for file in $( cat "$GIT_DIR/.gitignore" 2>/dev/null ); do
-	rm -rf $SVN_DIR/trunk/$file
+	rm -rfv $SVN_DIR/trunk/$file
 done
 echo "Done!"
+echo ""
+echo "svn commit -m 'Algun comentario'"
+echo "svn commit -m 'Algun comentario' --username lbonomo --password password"
