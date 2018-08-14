@@ -2,9 +2,10 @@
 Contributors: 
 Tags:
 Requires at least:
-Tested up to: 4.9
+Tested up to: 4.9.8
 Stable tag: 
 License:  GPLv2 or later
+Contributors: lbonomo
 
 A simple Google Analytics plugin for WordPress
 
