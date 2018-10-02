@@ -17,6 +17,14 @@ A simple Google Analytics plugin for WordPress. If you like more options install
 
 == Changelog ==
 
+= 0.0.5 =
+*Release Date - *
+- Probando en WordPress 5
+
+= 0.0.4 =
+*Release Date - 14 Agosto, 2018*
+- Probando en WordPress 4.9.8
+
 = 0.0.3 =
 *Release Date - 14 Noviembre, 2017*
 - Probando en WordPress 4.9
