@@ -15,19 +15,23 @@
  * Domain Path: /languages
  */
 
+require_once "classes/SimpleAnalytics.php";
 
-// Menu "Ajustes -> Simple Analytics" y pagina de configuracion.
-include_once(plugin_dir_path( __FILE__ ).'options.php');
 
-// Pagina de configuracion
-include_once(plugin_dir_path( __FILE__ ).'options_page.php');
+if ( ! defined( 'ABSPATH' ) ) { exit; }
 
-// Implementacion del codigo de seguimiento
-function ptr_analytics_put_code () {
-        // error_log("Analytics (code):\n".get_option( 'ptr_analytics_code' ));
-        echo "<!-- Google Analytics by Promotore -->\n";
-        echo get_option( 'ptr_analytics_code' )."\n";
-        echo "<!-- Google Analytics by Promotore -->\n";
+/**** Activator ****/
+register_activation_hook( __FILE__,  array( 'SimplaAnalytics', 'activate' ) );
+
+/**** Deactivator ****/
+register_deactivation_hook( __FILE__,  array( 'SimplaAnalytics', 'deactivation' ) );
+
+/**** Uninstall ****/
+register_uninstall_hook( __FILE__,  array( 'SimplaAnalytics', 'uninstall' ) );
+
+
+function simple_analytics_run() {
+    $plugin = new SimpleAnalytics();
 }
 
-add_action( 'wp_head', 'ptr_analytics_put_code' );
+simple_analytics_run();

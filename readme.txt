@@ -2,7 +2,7 @@
 Contributors: 
 Tags:
 Requires at least:
-Tested up to: 4.9.8
+Tested up to: 5.1
 Stable tag: 
 License:  GPLv2 or later
 Contributors: lbonomo
@@ -18,8 +18,9 @@ A simple Google Analytics plugin for WordPress. If you like more options install
 == Changelog ==
 
 = 0.0.5 =
-*Release Date - *
-- Probando en WordPress 5
+*Release Date - 16 Octubre, 2018 *
+- Tested on WordPress 5.0
+- Rewrited (in Class)
 
 = 0.0.4 =
 *Release Date - 14 Agosto, 2018*
