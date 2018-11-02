@@ -2,7 +2,7 @@
 Contributors: 
 Tags:
 Requires at least:
-Tested up to: 5.1
+Tested up to: 5.0
 Stable tag: 
 License:  GPLv2 or later
 Contributors: lbonomo

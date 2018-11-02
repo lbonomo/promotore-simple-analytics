@@ -52,7 +52,7 @@ class SimpleAnalyticsAdmin {
         $name = $args['label_for'];
         $description = $args['description'];
         $class = $args['class'];
-        $html = "<textarea rows='8' name='$name' class='$class'>$value</textarea>";
+        $html = "<textarea rows='9' name='$name' class='$class'>$value</textarea>";
         if ($description !== null ) { $html .= "<p class='description'>$description</p>"; }
         echo $html;
     }
