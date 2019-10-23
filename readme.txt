@@ -1,9 +1,9 @@
 === Promotore Simple Analytics ===
-Contributors: 
-Tags:
+Contributors:
+Tags: Google Analytics
 Requires at least:
-Tested up to: 5.0
-Stable tag: 
+Tested up to: 5.3
+Stable tag:
 License:  GPLv2 or later
 Contributors: lbonomo
 
@@ -16,6 +16,10 @@ A simple Google Analytics plugin for WordPress. If you like more options install
 
 
 == Changelog ==
+
+= 1.0.0 =
+*Release Date - 23 Octubre, 2019 *
+- Tested on WordPress 5.3
 
 = 0.0.5 =
 *Release Date - 16 Octubre, 2018 *
@@ -37,4 +41,3 @@ A simple Google Analytics plugin for WordPress. If you like more options install
 = 0.0.1 =
 *Release Date - 13 Mayo, 2017*
 - Initial commit
-

@@ -1,15 +1,15 @@
 <?php
 /**
- * @package Promotore Simple Analytics 
+ * @package Promotore Simple Analytics
  */
 
 /*
  * Plugin Name: Promotore Simple Analytics
  * Plugin URI: https://promotore.com.ar/wordpress-plugins/
  * Description: A simple Google Analytics plugin for WordPress
- * Version: 0.0.5
+ * Version: 1.0.0
  * Author: Lucas Bonomo
- * Author URI: https://lucasbonomo.com
+ * Author URI: https://lucasbonomo.com/wordpress
  * License: GPLv2 or later
  * Text Domain: promotore-simple-analytics
  * Domain Path: /languages

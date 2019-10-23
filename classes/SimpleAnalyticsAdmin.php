@@ -63,7 +63,7 @@ class SimpleAnalyticsAdmin {
             'Simple Analytics Config',
             'Simple Analytics', 
             'manage_options',
-            'simple-nalytics-settings',
+            'simple-analytics-settings',
             array( $this, 'simple_analytics_page_display')
         );
     }
