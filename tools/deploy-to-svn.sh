@@ -44,7 +44,7 @@ rsync -r --exclude='*.git*' $GIT_DIR/* $SVN_DIR/trunk
 echo "Done!"
 
 echo "Rsync'ing everything over from Git except for .git stuffs"
-rsync -r --exclude='*.git*' $GIT_DIR/* $SVN_DIR/assets
+rsync -r --exclude='*.git*' $GIT_DIR/assets/* $SVN_DIR/assets
 echo "Done!"
 
 echo "Purging paths included in .gitignore"
