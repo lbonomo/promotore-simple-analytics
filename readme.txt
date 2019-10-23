@@ -1,4 +1,4 @@
-=== Promotore Simple Analytics ===
+=== Simple Analytics ===
 Contributors:
 Tags: Google Analytics
 Requires at least:
@@ -16,6 +16,11 @@ A simple Google Analytics plugin for WordPress. If you like more options install
 
 
 == Changelog ==
+
+= 1.0.1 =
+*Release Date - 23 Octubre, 2019 *
+- Update images
+- Remove "Promotore" from title
 
 = 1.0.0 =
 *Release Date - 23 Octubre, 2019 *

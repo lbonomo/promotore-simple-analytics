@@ -4,14 +4,14 @@
  */
 
 /*
- * Plugin Name: Promotore Simple Analytics
- * Plugin URI: https://promotore.com.ar/wordpress-plugins/
+ * Plugin Name: Simple Analytics
+ * Plugin URI: https://lucasbonomo.com/wordpress/
  * Description: A simple Google Analytics plugin for WordPress
- * Version: 1.0.0
+ * Version: 1.0.1
  * Author: Lucas Bonomo
  * Author URI: https://lucasbonomo.com/wordpress
  * License: GPLv2 or later
- * Text Domain: promotore-simple-analytics
+ * Text Domain: simple-analytics
  * Domain Path: /languages
  */
 

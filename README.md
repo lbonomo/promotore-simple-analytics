@@ -1,4 +1,4 @@
-# Promotore Simple Analytics
+# Simple Analytics
 
 A simple Google Analytics plugin for WordPress. If you like more options install Google Analytics for WordPress by MonsterInsights
 
@@ -6,7 +6,7 @@ A simple Google Analytics plugin for WordPress. If you like more options install
 
 
 ## To install
-Admin -> Plugin -> Ad new and find "Promotore Simple Analytics"
+Admin -> Plugin -> Ad new and find "Simple Analytics"
 
 https://wordpress.org/plugins/promotore-simple-analytics/
 
@@ -18,4 +18,3 @@ https://wordpress.org/plugins/promotore-simple-analytics/
 
 ### Fuente
 ![screenshot-2](https://github.com/lbonomo/promotore-simple-analytics/raw/master/assets/screenshot-2.png)
-
