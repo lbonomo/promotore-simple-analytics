@@ -1,6 +1,6 @@
 <?php
 /**
- * @package Promotore Simple Analytics
+ * @package Simple Analytics
  */
 
 /*
@@ -11,27 +11,33 @@
  * Author: Lucas Bonomo
  * Author URI: https://lucasbonomo.com/wordpress
  * License: GPLv2 or later
- * Text Domain: simple-analytics
+ * Text Domain: promotore-simple-analytics
  * Domain Path: /languages
  */
+
+// If this file is called directly, abort.
+if ( ! defined( 'WPINC' ) ) {
+	die;
+}
 
 require_once "classes/SimpleAnalytics.php";
 
 
-if ( ! defined( 'ABSPATH' ) ) { exit; }
+function activate_simple_analytics() {
+	require_once plugin_dir_path( __FILE__ ) . 'classes/SimpleAnalyticsActivator.php';
+	SimpleAnalyticsActivator::activate();
+}
 
-/**** Activator ****/
-register_activation_hook( __FILE__,  array( 'SimplaAnalytics', 'activate' ) );
+function deactivate_simple_analytics() {
+	require_once plugin_dir_path( __FILE__ ) . 'classes/SimpleAnalyticsDeactivator.php';
+	SimpleAnalyticsDeactivator::deactivate();
+}
 
-/**** Deactivator ****/
-register_deactivation_hook( __FILE__,  array( 'SimplaAnalytics', 'deactivation' ) );
-
-/**** Uninstall ****/
-register_uninstall_hook( __FILE__,  array( 'SimplaAnalytics', 'uninstall' ) );
-
+register_activation_hook( __FILE__, 'activate_simple_analytics' );
+register_deactivation_hook( __FILE__, 'deactivate_simple_analytics' );
 
 function simple_analytics_run() {
-    $plugin = new SimpleAnalytics();
+    $plugin = new SimpleAnalytics;
 }
 
 simple_analytics_run();
