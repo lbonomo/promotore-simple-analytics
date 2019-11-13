@@ -17,6 +17,10 @@ A simple Google Analytics plugin for WordPress. If you like more options install
 
 == Changelog ==
 
+= 1.0.2 =
+*Release Date - 12 Noviembre, 2019 *
+- Fix registre plugin action
+
 = 1.0.1 =
 *Release Date - 23 Octubre, 2019 *
 - Update images
