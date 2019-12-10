@@ -21,3 +21,5 @@ https://wordpress.org/plugins/promotore-simple-analytics/
 
 
 <!-- https://developers.google.com/tag-manager/quickstart -->
+### Github actions
+https://wordpress.tv/2019/11/11/bernhard-kau-automated-deployments-for-plugins-with-github-actions/
