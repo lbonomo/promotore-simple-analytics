@@ -18,3 +18,7 @@ https://wordpress.org/plugins/promotore-simple-analytics/
 
 ### Fuente
 ![screenshot-2](https://github.com/lbonomo/promotore-simple-analytics/raw/master/assets/screenshot-2.png)
+
+
+
+https://developers.google.com/tag-manager/quickstart

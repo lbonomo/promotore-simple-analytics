@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 class SimpleAnalyticsAdmin {
 
@@ -8,37 +8,83 @@ class SimpleAnalyticsAdmin {
     }
 
     # SECTION
-    function simple_analytics_register_setting() {     
+    function simple_analytics_register_setting() {
 
-        // Section
+        /**** Section ****/
         add_settings_section(
             'simple-analytics-options-section',
             'Opciones de Simple Analytics',
             array($this, 'simple_analytics_section_callback'),
             'simple-analytics-settings');
 
-        # Registro el "permiso" 
+        /**** Codigo de seguimiento ****/
+        # Setting
         register_setting(
             # Nombre del grupo de configuración
             'simple-analytics-settings',
             # Nombre del valor a guardar
             'ptr_analytics_code');
 
-        /* CAMPOS */
-        /**** Codigo de seguimiento ****/            
+        # Render
         add_settings_field(
             'ptr_analytics_code',
-            'Código de seguimiento',
+            'Código de seguimiento de Google Analytics',
             array($this,'textare_callback'),
             'simple-analytics-settings',            # Menu donde se muestra
             'simple-analytics-options-section',     # Seccion donde se agraga
             [
                 'label_for' => 'ptr_analytics_code',
-                'description' => 'Pegue aqui el codigo de seguimiento de Google',
+                'description' => 'Pegue aqui el codigo de seguimiento de Google Analytics',
+                'class' => 'large-text',
+            ]
+        );
+
+        /**** Codigo de Tab Manager ****/
+        # Setting
+        register_setting(
+            # Nombre del grupo de configuración
+            'simple-analytics-settings',
+            # Nombre del valor a guardar
+            'ptr_tagmanager_code');
+
+        # Render
+        add_settings_field(
+            'ptr_tagmanager_code',
+            'Código Google Tag Manager',
+            array($this,'textare_callback'),
+            'simple-analytics-settings',            # Menu donde se muestra
+            'simple-analytics-options-section',     # Seccion donde se agraga
+            [
+                'label_for' => 'ptr_tagmanager_code',
+                'description' => 'Pegue aquí el codigo de Google Tag Manager',
+                'class' => 'large-text',
+            ]
+        );
+
+        /**** Codigo de Tab Manager ****/
+        # Setting
+        register_setting(
+            # Nombre del grupo de configuración
+            'simple-analytics-settings',
+            # Nombre del valor a guardar
+            'ptr_noscript_code');
+
+        # Render
+        add_settings_field(
+            'ptr_noscript_code',
+            'Código noscript',
+            array($this,'textare_callback'),
+            'simple-analytics-settings',            # Menu donde se muestra
+            'simple-analytics-options-section',     # Seccion donde se agraga
+            [
+                'label_for' => 'ptr_noscript_code',
+                'description' => 'Pegue aquí el codigo de Google Tag Manager (noscript)',
                 'class' => 'large-text',
             ]
         );
     }
+
+
 
     function simple_analytics_section_callback() {
         # Output nonce, action, and option_page fields for a settings page
@@ -61,7 +107,7 @@ class SimpleAnalyticsAdmin {
     function simple_analytics_menu() {
         add_options_page(
             'Simple Analytics Config',
-            'Simple Analytics', 
+            'Simple Analytics',
             'manage_options',
             'simple-analytics-settings',
             array( $this, 'simple_analytics_page_display')
@@ -69,14 +115,14 @@ class SimpleAnalyticsAdmin {
     }
 
     # Pagina a mostrar en ese menu
-    static function simple_analytics_page_display() {  
+    static function simple_analytics_page_display() {
         # Verifico permisos
         if (current_user_can('manage_options')) {
             echo '<form action="options.php" method="post">';
-            # Prints out all settings sections added to a particular settings page. 
+            # Prints out all settings sections added to a particular settings page.
             do_settings_sections('simple-analytics-settings');
             submit_button("Grabar");
-            echo '</form>';          
+            echo '</form>';
         }
     }
 
