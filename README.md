@@ -1,6 +1,6 @@
 # Simple Analytics
 
-A simple Google Analytics plugin for WordPress. If you like more options install Google Analytics for WordPress by MonsterInsights
+A simple Google Analytics and Tag Manager plugin for WordPress. If you like more options install Google Analytics for WordPress by MonsterInsights
 
 ![banner](.wordpress-org/banner-1544x500.png)
 
