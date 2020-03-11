@@ -6,7 +6,7 @@ class SimpleAnalyticsHead {
         # No es optimo pero quiero que sea independiente del Theme
         add_action( 'wp_head', array($this, 'ptr_tagmanager_put_code'));
         # TODO - Es necesario mover debajo de la etiqueta <body>
-        add_action( 'wp_footer', array($this, 'ptr_noscript_put_code'), 1);
+        add_action( 'wp_body_open', array($this, 'ptr_noscript_put_code'), 1);
     }
 
     // Implementacion del codigo de seguimiento
