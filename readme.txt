@@ -1,9 +1,9 @@
 === Simple Analytics ===
 Contributors:
 Tags: Google Analytics
-Requires at least:
-Tested up to: 5.3
-Stable tag:
+Requires at least: 5.2
+Tested up to: 5.5
+Stable tag: Analytics, Tag Manager
 License:  GPLv2 or later
 Contributors: lbonomo
 
@@ -16,6 +16,11 @@ A simple Google Analytics plugin for WordPress. If you like more options install
 
 
 == Changelog ==
+
+= 1.2.0 =
+*Release Date - 11 de marzo, 2020 *
+- Implemente wp_body_open()
+- Tested in WordPress 5.5
 
 = 1.1.0 =
 *Release Date - 10 diciembre, 2019 *
