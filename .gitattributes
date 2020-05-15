@@ -1,2 +1,4 @@
-.wordpress-org/*.xcf
-.wordpress-org/*.sh
+/.github export-ignore
+/.git export-ignore
+/.gitattributes export-ignore
+/.wordpress-org export-ignore
