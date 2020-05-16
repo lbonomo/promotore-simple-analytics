@@ -1,2 +1,10 @@
 <?php
-// Silence is golden.
+/**
+ * Silence file.
+ *
+ * @package Simple Analytics
+ */
+
+/**
+ * Silence is golden.
+ */
