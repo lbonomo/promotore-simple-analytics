@@ -9,7 +9,7 @@
  * Plugin Name: Simple Analytics
  * Plugin URI: https://lucasbonomo.com/wordpress/
  * Description: A simple Google Analytics (and Tab Manager) plugin for WordPress
- * Version: 1.3.0
+ * Version: 1.3.1
  * Author: Lucas Bonomo
  * Author URI: https://lucasbonomo.com/wordpress
  * License: GPLv2 or later
