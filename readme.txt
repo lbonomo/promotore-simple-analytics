@@ -2,7 +2,7 @@
 Contributors:
 Tags: Google Analytics
 Requires at least: 5.0.0
-Tested up to: 5.7.0
+Tested up to: 5.8.0
 Stable tag: Analytics, Tag Manager
 License:  GPLv2 or later
 Contributors: lbonomo
