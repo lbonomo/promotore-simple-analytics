@@ -2,7 +2,7 @@
 Contributors:
 Tags: Google Analytics
 Requires at least: 5.0.0
-Tested up to: 5.8.0
+Tested up to: 6.7.1
 Stable tag: Analytics, Tag Manager
 License:  GPLv2 or later
 Contributors: lbonomo
@@ -16,6 +16,10 @@ A simple Google Analytics plugin for WordPress. If you like more options install
 
 
 == Changelog ==
+
+= 1.4.4 =
+*Release Date - 29/01/2025*
+- Tested on WordPress 6.7.1
 
 = 1.3.2 =
 *Release Date - 16/02/2021*
