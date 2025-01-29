@@ -4,6 +4,7 @@ on:
     tags:
     - "*"
     - "!*-*"
+  workflow_dispatch:
 jobs:
   tag:
     name: New tag
