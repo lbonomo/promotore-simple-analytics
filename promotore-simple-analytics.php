@@ -1,15 +1,20 @@
 <?php
 /**
- * Main file of plugin
+ * Simple Analytics
  *
- * @package Simple Analytics
- */
-
-/*
- * Plugin Name: Simple Analytics
- * Plugin URI: https://lucasbonomo.com/wordpress/
- * Description: A simple Google Analytics (and Tab Manager) plugin for WordPress
- * Version: 1.4.4
+ * @package Simple_Analytics
+ * @author      Lucas Bonomo
+ * @copyright   2025 Lucas Bonomo
+ * @license     GPL-2.0-or-later
+ *
+ * @wordpress-plugin
+ * Plugin Name:  Simple Analytics
+ * Plugin URI:   https://lucasbonomo.com/wordpress/plugins/promotore-simple-analytics
+ * Description:  A simple Google Analytics (and Tab Manager) plugin for WordPress
+ * Version:      1.4.4
+ * Stable tag:   1.4.4
+ * Requires PHP: 7.0
+ * Tested up to: 6.7.1
  * Author: Lucas Bonomo
  * Author URI: https://lucasbonomo.com/wordpress
  * License: GPLv2 or later

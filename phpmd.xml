@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<rulset>
+	<rule ref="rulesets/cleancode.xml"/>
+	<rule ref="rulesets/unusedcode.xml"/>
+	<rule ref="rulesets/design.xml"/>
+	<rule ref="rulesets/codesize.xml"/>
+
+	<!-- Definir los archivos o directorios a analizar -->
+
+	<file>./admin/</file>
+	<file>./api/</file>
+	<file>./includes/</file>
+	<file>./public/</file>
+	<file>./show-remote-ip.php</file>
+
+</rulset>

@@ -2,7 +2,10 @@
 /.git
 /.github
 /node_modules
-
 .distignore
 .gitignore
 README.md
+composer.json
+composer.lock
+phpmd.xml
+phpcs.xml

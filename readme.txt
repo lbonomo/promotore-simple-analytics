@@ -1,11 +1,12 @@
 === Simple Analytics ===
-Contributors:
-Tags: Google Analytics
-Requires at least: 5.0.0
-Tested up to: 6.7.1
-Stable tag: Analytics, Tag Manager
-License:  GPLv2 or later
 Contributors: lbonomo
+Donate link: https://lucasbonomo.com/donate
+Tags: Google Analytics, Google Tag Manager
+Requires at least: 5.0.0
+Version: 1.4.4
+Stable tag: 1.4.4
+Tested up to: 6.7.1
+License: GPLv2 or later
 
 A simple Google Analytics plugin for WordPress
 
